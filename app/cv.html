@@ -1,0 +1,15 @@
+<section class="cv">
+  <h2>{{explorer.currentCV.title}}</h2>
+  <div class="cv-page">
+    <div class="cv-section" ng-repeat="section in explorer.currentPage.sections">
+      {{section.content}}
+    </div>
+  </div>
+  <nav ng-show="explorer.currentCV.pages.length > 1">
+    <ul class="cv-page-navigator">
+      <li ng-repeat="page in explorer.currentCV.pages">
+        <a href ng-click="explorer.setPage($index)">{{page.name}}</a>
+      </li>
+    </ul>
+  </nav>  
+</section>
