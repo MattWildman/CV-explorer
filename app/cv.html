@@ -1,9 +1,7 @@
 <section class="cv">
   <h2>{{explorer.currentCV.title}}</h2>
   <div class="cv-page">
-    <div class="cv-section" ng-repeat="section in explorer.currentPage.sections">
-      {{section.content}}
-    </div>
+    <div class="cv-section" ng-repeat="section in explorer.currentPage.sections" ng-bind-html="section.content"></div>
   </div>
   <nav ng-show="explorer.currentCV.pages.length > 1">
     <ul class="cv-page-navigator">

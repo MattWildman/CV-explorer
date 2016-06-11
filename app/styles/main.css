@@ -5,6 +5,11 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+    width: 478px;
+    margin: 0 auto;
+}
+
 #CVExplorer {
   width: 100%;
 }
@@ -12,9 +17,9 @@ body {
 #CVExplorer .cv-page {
   width: 400px;
   height: calc(400px*1.4142);
-  margin: 0 auto;
   padding: 1em;
   border:1px solid black;
+  background-color: #FFF;
 }
 
 #CVExplorer .cv-section {

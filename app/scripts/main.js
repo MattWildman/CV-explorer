@@ -1,11 +1,11 @@
 (function() {
-	var app = angular.module('cv-tool', []);
+	var app = angular.module('cv-tool', ['ngSanitize']);
 	app.controller('ExplorerController', function() {
 		this.cvs = [
 			{
 				id: 'beginner',
 				title: 'First CV',
-				pages: [ 
+				pages: [
 					{
 						name: 'Page one',
 						sections: [
@@ -45,7 +45,7 @@
 			{
 				id: 'experienced',
 				title: 'Experienced hire CV',
-				pages: [ 
+				pages: [
 					{
 						name: 'Relevant experience',
 						sections: [
@@ -97,6 +97,6 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'cv.html'
-		}
+		};
 	});
-})()
+})();
