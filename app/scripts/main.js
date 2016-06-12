@@ -84,13 +84,13 @@
 			}
 		];
 		this.currentCV = this.cvs[0];
-		this.currentPage = this.currentCV.pages[0];
+		this.currentPage = 0;
 		this.setCV = function(index) {
 			this.currentCV = this.cvs[index];
 			this.setPage(0);
 		};
 		this.setPage = function(index) {
-			this.currentPage = this.currentCV.pages[index];
+			this.currentPage = index;
 		};
 	});
 	app.directive('cv', function() {
