@@ -14,9 +14,40 @@ body {
   width: 100%;
 }
 
+#CVExplorer ul.tab-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#CVExplorer .tab-nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#CVExplorer .tab-nav.cv-page-navigator {
+  justify-content: center;
+}
+
+#CVExplorer .tab-nav .nav-item {
+
+}
+
+#CVExplorer .tab-nav .nav-item a {
+  padding: 1em;
+  text-decoration: none;
+  display: block;
+}
+
+#CVExplorer .tab-nav .nav-item a.active {
+
+}
+
 #CVExplorer .cv-page {
   width: 400px;
   height: calc(400px*1.4142);
+  margin: 0 auto;
   padding: 1em;
   border:1px solid black;
   background-color: #FFF;

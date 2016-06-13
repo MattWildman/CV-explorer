@@ -1,0 +1,34 @@
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+1) a {
+	background: #7CCC80;
+}
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+1) a:hover {
+	background: #A3DBA6;
+}
+
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a {
+	background: #F9AB63;
+}
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a:hover {
+	background: #FAC38E;
+}
+
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a {
+	background: #4DB8E4;
+}
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a:hover {
+	background: #82CDEC;
+}
+
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a {
+	background: #946AAF;
+}
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a:hover {
+	background: #C3ACD2;
+}
+
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a {
+	background: #F03E4D;
+}
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a:hover {
+	background: #F7939C;
+}

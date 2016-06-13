@@ -1,0 +1,105 @@
+[
+	{
+		"id": "beginner",
+		"title": "First CV",
+		"pages": [
+			{
+				"name": "Page one",
+				"sections": [
+					{
+						"title": "Heading",
+						"content": "<p>Beginners' CV heading section</p>"
+					},
+					{
+						"title": "Statement",
+						"content": "<p>Beginners' CV statement</p>"
+					},
+					{
+						"title": "Education",
+						"content": "<p>Beginners' CV education</p>"
+					}
+				]
+			},
+			{
+				"name": "Page two",
+				"sections": [
+					{
+						"title": "Work experience",
+						"content": "<p>Beginners' CV work experience</p>"
+					},
+					{
+						"title": "Skills",
+						"content": "<p>Beginners' CV skills</p>"
+					},
+					{
+						"title": "Interests",
+						"content": "<p>Beginners' CV interests</p>"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "experienced",
+		"title": "Experienced hire CV",
+		"pages": [
+			{
+				"name": "Relevant experience",
+				"sections": [
+					{
+						"title": "Heading",
+						"content": "<p>Experienced CV heading section</p>"
+					},
+					{
+						"title": "Statement",
+						"content": "<p>Experienced CV statement</p>"
+					},
+					{
+						"title": "Education",
+						"content": "<p>Experienced CV education</p>"
+					}
+				]
+			},
+			{
+				"name": "Full history",
+				"sections": [
+					{
+						"title": "Work experience",
+						"content": "<p>Experienced CV work experience</p>"
+					},
+					{
+						"title": "Skills",
+						"content": "<p>Experienced CV skills</p>"
+					},
+					{
+						"title": "Interests",
+						"content": "<p>Experienced CV interests</p>"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Career changer CV",
+		"id": "change",
+		"pages": [
+			{
+				"name": "Page one",
+				"sections": [
+					{
+						"title": "Heading",
+						"content": "<h3>Career changer heading</h3>"
+					},
+					{
+						"title": "Statement",
+						"content": "<p>Statement about why you are considering a career change</p>"
+					},
+					{
+						"title": "Skills",
+						"content": "<h3>Your skills</h3><p>What transferable skills do you have?</p>"
+					}
+				]
+			}
+		]
+	}
+]

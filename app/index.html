@@ -8,7 +8,7 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles/main.css">
-    
+    <link rel="stylesheet" href="styles/colours.css">
   </head>
   <body>
     <h1>CV Explorer</h1>
@@ -18,9 +18,11 @@
         <main id="CVExplorer" ng-app="cv-tool" ng-controller="ExplorerController as explorer">
           
             <nav ng-show="explorer.cvs.length > 1">
-                <ul class="cv-navigator">
-                    <li ng-repeat="cv in explorer.cvs">
-                        <a href ng-click="explorer.setCV($index)">{{cv.title}}</a>
+                <ul class="cv-navigator tab-nav">
+                    <li ng-repeat="cv in explorer.cvs" class="nav-item">
+                        <a href ng-click="explorer.setCV($index)" ng-class="{active:$index === explorer.currentIndex}">
+                            {{cv.title}}
+                        </a>
                     </li>       
                 </ul>
             </nav>

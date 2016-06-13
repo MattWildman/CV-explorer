@@ -4,9 +4,11 @@
     <div class="cv-section" ng-repeat="section in page.sections" ng-bind-html="section.content"></div>
   </div>
   <nav ng-show="explorer.currentCV.pages.length > 1">
-    <ul class="cv-page-navigator">
-      <li ng-repeat="page in explorer.currentCV.pages">
-        <a href ng-click="explorer.setPage($index)">{{page.name}}</a>
+    <ul class="cv-page-navigator tab-nav">
+      <li ng-repeat="page in explorer.currentCV.pages" class="nav-item">
+        <a href ng-click="explorer.setPage($index)" ng-class="{active:$index === explorer.currentPage}">
+          {{page.name}}
+        </a>
       </li>
     </ul>
   </nav>  
