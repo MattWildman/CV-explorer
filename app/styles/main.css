@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    width: 478px;
+    max-width: 478px;
     margin: 0 auto;
 }
 
@@ -34,23 +34,46 @@ body {
 
 }
 
-#CVExplorer .tab-nav .nav-item a {
-  padding: 1em;
+#CVExplorer .tab-nav .nav-item a, #CVExplorer .one-page-label {
   text-decoration: none;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1em;
   display: block;
+  position: relative;
+  font-weight: bold;
+  color: black;
 }
 
-#CVExplorer .tab-nav .nav-item a.active {
+#CVExplorer .tab-nav .nav-item a.active::after {
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+  display: block;
+  border: 1em solid transparent;
+  top: 100%;
+  left: calc(50% - 17px);
+}
 
+#CVExplorer .tab-nav.cv-page-navigator .nav-item a, #CVExplorer .one-page-label {
+  font-weight: normal;
+}
+
+#CVExplorer .one-page-label p {
+  margin: 0;
+  padding: 0;
 }
 
 #CVExplorer .cv-page {
   width: 400px;
   height: calc(400px*1.4142);
   margin: 0 auto;
+  margin-bottom: 2em;
   padding: 1em;
-  border:1px solid black;
+  border:1px solid #E2E2E2;
   background-color: #FFF;
+  box-shadow: 5px 5px 7px #AAA;
 }
 
 #CVExplorer .cv-section {

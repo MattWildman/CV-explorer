@@ -1,7 +1,7 @@
 [
 	{
 		"id": "beginner",
-		"title": "First CV",
+		"title": "Your first CV",
 		"pages": [
 			{
 				"name": "Page one",
@@ -41,7 +41,7 @@
 	},
 	{
 		"id": "experienced",
-		"title": "Experienced hire CV",
+		"title": "Experienced hire",
 		"pages": [
 			{
 				"name": "Relevant experience",
@@ -80,11 +80,11 @@
 		]
 	},
 	{
-		"title": "Career changer CV",
+		"title": "Career changer",
 		"id": "change",
 		"pages": [
 			{
-				"name": "Page one",
+				"name": "These CVs are usually one page long",
 				"sections": [
 					{
 						"title": "Heading",

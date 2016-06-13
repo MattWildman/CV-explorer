@@ -1,20 +1,22 @@
 (function() {
+	
 	var app = angular.module('cv-tool', ['ngSanitize']);
+
 	app.controller('ExplorerController', ['$http', function($http) {
 		
 		var explorer = this;
 
-		this.cvs = [];
-		this.currentIndex = 0;
-		this.currentCV = {};
-		this.currentPage = 0;
-		this.setCV = function(index) {
-			this.currentIndex = index;
-			this.currentCV = this.cvs[this.currentIndex];
-			this.setPage(0);
+		explorer.cvs = [];
+		explorer.currentIndex = 0;
+		explorer.currentCV = {};
+		explorer.currentPage = 0;
+		explorer.setCV = function(index) {
+			explorer.currentIndex = index;
+			explorer.currentCV = explorer.cvs[explorer.currentIndex];
+			explorer.setPage(0);
 		};
 		this.setPage = function(index) {
-			this.currentPage = index;
+			explorer.currentPage = index;
 		};
 
 		$http.get('cvs.json').success(function(data) {
@@ -23,10 +25,12 @@
 		});
 
 	}]);
+
 	app.directive('cv', function() {
 		return {
 			restrict: 'E',
 			templateUrl: 'cv.html'
 		};
 	});
+
 })();

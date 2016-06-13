@@ -1,8 +1,5 @@
 <section class="cv">
   <h2>{{explorer.currentCV.title}}</h2>
-  <div class="cv-page" ng-repeat="page in explorer.currentCV.pages" ng-show="$index === explorer.currentPage">
-    <div class="cv-section" ng-repeat="section in page.sections" ng-bind-html="section.content"></div>
-  </div>
   <nav ng-show="explorer.currentCV.pages.length > 1">
     <ul class="cv-page-navigator tab-nav">
       <li ng-repeat="page in explorer.currentCV.pages" class="nav-item">
@@ -11,5 +8,11 @@
         </a>
       </li>
     </ul>
-  </nav>  
+  </nav>
+  <div class="one-page-label" ng-show="explorer.currentCV.pages.length === 1">
+    <p>These CVs are usually one page long</p>
+  </div>
+  <div class="cv-page" ng-repeat="page in explorer.currentCV.pages" ng-show="$index === explorer.currentPage">
+    <div class="cv-section" ng-repeat="section in page.sections" ng-bind-html="section.content"></div>
+  </div>  
 </section>
