@@ -2,16 +2,15 @@ body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
-  box-sizing: border-box;
 }
 
 .container {
-    max-width: 478px;
+    max-width: 716px;
     margin: 0 auto;
 }
 
-#CVExplorer {
-  width: 100%;
+#CVExplorer * {
+  box-sizing: border-box;
 }
 
 #CVExplorer ul.tab-nav {
@@ -31,7 +30,17 @@ body {
 }
 
 #CVExplorer .tab-nav .nav-item {
+  flex: 1 0 1;
+  flex-align: stretch;
+}
 
+#CVExplorer .one-page-label {
+  margin: 0 1em;
+}
+
+#CVExplorer .one-page-label * {
+  margin: 0;
+  padding: 0;
 }
 
 #CVExplorer .tab-nav .nav-item a, #CVExplorer .one-page-label {
@@ -60,9 +69,9 @@ body {
   font-weight: normal;
 }
 
-#CVExplorer .one-page-label p {
-  margin: 0;
-  padding: 0;
+#CVExplorer .cv {
+  float: left;
+  width: 478px;
 }
 
 #CVExplorer .cv-page {
@@ -74,8 +83,21 @@ body {
   border:1px solid #E2E2E2;
   background-color: #FFF;
   box-shadow: 5px 5px 7px #AAA;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
-#CVExplorer .cv-section {
-  display: table-row;
+#CVExplorer .cv-notes {
+  width: 238px;
+  display: inline-block;
+  padding: 1em;
+  background-color: #E2E2E2;
+}
+
+#CVExplorer .cv-notes .cv-notes-default {
+  color: white;
+  font-weight: bold;
+  font-size: 150%;
+  text-align: center;
 }

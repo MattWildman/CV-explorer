@@ -10,13 +10,19 @@
 		explorer.currentIndex = 0;
 		explorer.currentCV = {};
 		explorer.currentPage = 0;
+		explorer.currentSection = {};
+
 		explorer.setCV = function(index) {
 			explorer.currentIndex = index;
 			explorer.currentCV = explorer.cvs[explorer.currentIndex];
 			explorer.setPage(0);
 		};
-		this.setPage = function(index) {
+		explorer.setPage = function(index) {
 			explorer.currentPage = index;
+			explorer.currentSection = {};
+		};
+		explorer.setSection = function(index) {
+			explorer.currentSection = explorer.currentCV.pages[explorer.currentPage].sections[index];
 		};
 
 		$http.get('cvs.json').success(function(data) {
@@ -30,6 +36,12 @@
 		return {
 			restrict: 'E',
 			templateUrl: 'cv.html'
+		};
+	});
+	app.directive('notes', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'notes.html'
 		};
 	});
 

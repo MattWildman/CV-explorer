@@ -8,7 +8,8 @@
 				"sections": [
 					{
 						"title": "Heading",
-						"content": "<p>Beginners' CV heading section</p>"
+						"content": "<p>Beginners' CV heading section</p>",
+						"notes": "<p>Notes about the heading section. What is it for? What needs to go in it? Examples.</p>"
 					},
 					{
 						"title": "Statement",
@@ -85,6 +86,59 @@
 		"pages": [
 			{
 				"name": "These CVs are usually one page long",
+				"sections": [
+					{
+						"title": "Heading",
+						"content": "<h3>Career changer heading</h3>"
+					},
+					{
+						"title": "Statement",
+						"content": "<p>Statement about why you are considering a career change</p>"
+					},
+					{
+						"title": "Skills",
+						"content": "<h3>Your skills</h3><p>What transferable skills do you have?</p>"
+					}
+				]
+			}
+		]
+	},
+	{
+		"title": "Academic",
+		"id": "academic",
+		"pages": [
+			{
+				"name": "Current research",
+				"sections": [
+					{
+						"title": "Heading",
+						"content": "<h3>Acadmic heading</h3>"
+					},
+					{
+						"title": "Statement",
+						"content": "<p>Statement about what you want to research</p>"
+					},
+					{
+						"title": "Skills",
+						"content": "<h3>Your skills</h3><p>What transferable skills do you have?</p>"
+					}
+				]
+			},
+			{
+				"name": "Publications",
+				"sections": [
+					{
+						"title": "Top publications",
+						"content": "<p>Your main publications</p>"
+					},
+					{
+						"title": "Past publications",
+						"content": "<p>Chronological list of all publications</p>"
+					}
+				]
+			},
+			{
+				"name": "Conference talks",
 				"sections": [
 					{
 						"title": "Heading",
