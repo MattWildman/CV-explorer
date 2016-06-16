@@ -1,18 +1,18 @@
 <h2>{{explorer.currentCV.title}}</h2>
 <section class="cv">
-  <nav ng-show="explorer.currentCV.pages.length > 1">
-    <ul class="cv-page-navigator tab-nav">
-      <li ng-repeat="page in explorer.currentCV.pages" class="nav-item">
-        <a href ng-click="explorer.setPage($index)" ng-class="{active:$index === explorer.currentPage}">
-          {{page.name}}
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div class="one-page-label" ng-show="explorer.currentCV.pages.length === 1">
-    <p>These CVs are usually one page long</p>
-  </div>
-  <div class="cv-page" ng-repeat="page in explorer.currentCV.pages" ng-show="$index === explorer.currentPage">
-    <div class="cv-section" ng-repeat="section in page.sections" ng-bind-html="section.content" ng-click="explorer.setSection($index)"></div>
-  </div>
+	<nav ng-show="explorer.currentCV.pages.length > 1">
+		<ul class="cv-page-navigator tab-nav">
+			<li ng-repeat="page in explorer.currentCV.pages" class="nav-item">
+				<a href ng-click="explorer.isActivePage($index) || explorer.setPage($index)" ng-class="{active:explorer.isActivePage($index)}">
+					{{page.name}}
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="one-page-label" ng-show="explorer.currentCV.pages.length === 1">
+		<p>These CVs can be one page long</p>
+	</div>
+	<div class="cv-page" ng-repeat="page in explorer.currentCV.pages" ng-show="explorer.isActivePage($index)">
+		<div class="cv-section" ng-repeat="section in page.sections" ng-bind-html="section.content" ng-click="explorer.setSection($index)"></div>
+	</div>
 </section>

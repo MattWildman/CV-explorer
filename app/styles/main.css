@@ -1,103 +1,116 @@
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+	background: #fafafa;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
 }
 
 .container {
-    max-width: 716px;
-    margin: 0 auto;
+		max-width: 716px;
+		margin: 0 auto;
 }
 
 #CVExplorer * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
 #CVExplorer ul.tab-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 #CVExplorer .tab-nav {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
 #CVExplorer .tab-nav.cv-page-navigator {
-  justify-content: center;
+	justify-content: center;
 }
 
 #CVExplorer .tab-nav .nav-item {
-  flex: 1 0 1;
-  flex-align: stretch;
+	flex: 1 0 1;
+	flex-align: stretch;
 }
 
 #CVExplorer .one-page-label {
-  margin: 0 1em;
+	margin: 0 1em;
 }
 
 #CVExplorer .one-page-label * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #CVExplorer .tab-nav .nav-item a, #CVExplorer .one-page-label {
-  text-decoration: none;
-  text-align: center;
-  padding: 1em;
-  margin-bottom: 1em;
-  display: block;
-  position: relative;
-  font-weight: bold;
-  color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 1em;
+	margin-bottom: 1em;
+	display: block;
+	position: relative;
+	font-weight: bold;
+	color: black;
 }
 
 #CVExplorer .tab-nav .nav-item a.active::after {
-  content: '';
-  height: 0;
-  width: 0;
-  position: absolute;
-  display: block;
-  border: 1em solid transparent;
-  top: 100%;
-  left: calc(50% - 17px);
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	display: block;
+	border: 1em solid transparent;
+	top: 100%;
+	left: calc(50% - 17px);
 }
 
 #CVExplorer .tab-nav.cv-page-navigator .nav-item a, #CVExplorer .one-page-label {
-  font-weight: normal;
+	font-weight: normal;
+	background-color: white;
 }
 
 #CVExplorer .cv {
-  float: left;
-  width: 478px;
+	float: left;
+	width: 66%;
 }
 
 #CVExplorer .cv-page {
-  width: 400px;
-  height: calc(400px*1.4142);
-  margin: 0 auto;
-  margin-bottom: 2em;
-  padding: 1em;
-  border:1px solid #E2E2E2;
-  background-color: #FFF;
-  box-shadow: 5px 5px 7px #AAA;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+	width: 400px;
+	height: calc(400px*1.4142);
+	margin: 0 auto;
+	margin-bottom: 2em;
+	padding: 1em;
+	border:1px solid #E2E2E2;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	background-color: #FFF;
+	box-shadow: 5px 5px 7px #AAA;
+	font-size: 75%;
+}
+
+#CVExplorer .cv-section {
+	cursor: pointer;
 }
 
 #CVExplorer .cv-notes {
-  width: 238px;
-  display: inline-block;
-  padding: 1em;
-  background-color: #E2E2E2;
+	width: 34%;
+	display: inline-block;
+	float: right;
+	padding: 1em;
+	background-color: #E2E2E2;
 }
 
 #CVExplorer .cv-notes .cv-notes-default {
-  color: white;
-  font-weight: bold;
-  font-size: 150%;
-  text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: center;
 }

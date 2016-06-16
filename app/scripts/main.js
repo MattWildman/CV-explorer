@@ -1,9 +1,9 @@
 (function() {
-	
+
 	var app = angular.module('cv-tool', ['ngSanitize']);
 
 	app.controller('ExplorerController', ['$http', function($http) {
-		
+
 		var explorer = this;
 
 		explorer.cvs = [];
@@ -23,6 +23,12 @@
 		};
 		explorer.setSection = function(index) {
 			explorer.currentSection = explorer.currentCV.pages[explorer.currentPage].sections[index];
+		};
+		explorer.isActiveCV = function(index) {
+			return index === explorer.currentIndex;
+		};
+		explorer.isActivePage = function(index) {
+			return index === explorer.currentPage;
 		};
 
 		$http.get('cvs.json').success(function(data) {

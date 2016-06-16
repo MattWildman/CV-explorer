@@ -1,44 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CV Explorer</title>
-    
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/colours.css">
-  </head>
-  <body>
-      
-    <div class="container">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CV Explorer</title>
 
-        <h1>CV Explorer</h1>
-        
-        <main id="CVExplorer" ng-app="cv-tool" ng-controller="ExplorerController as explorer">
-            <p>Choose a type of CV</p>
-            <nav ng-show="explorer.cvs.length > 1">
-                <ul class="cv-navigator tab-nav">
-                    <li ng-repeat="cv in explorer.cvs" class="nav-item">
-                        <a href ng-click="explorer.setCV($index)" ng-class="{active:$index === explorer.currentIndex}">
-                            {{cv.title}}
-                        </a>
-                    </li>       
-                </ul>
-            </nav>
-          
-            <cv></cv>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/colours.css">
+	</head>
+	<body>
 
-            <notes></notes>
-        
-        </main>
-    
-    </div>
+		<div class="container">
 
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="https://opensource.keycdn.com/angularjs/1.5.5/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.6/angular-sanitize.min.js"></script>
-    <script src="scripts/main.js"></script>
+				<h1>CV Explorer</h1>
 
-  </body>
+				<main id="CVExplorer" class="clearfix" ng-app="cv-tool" ng-controller="ExplorerController as explorer">
+					<nav ng-show="explorer.cvs.length > 1">
+						<p>Choose a type of CV</p>
+						<ul class="cv-navigator tab-nav">
+							<li ng-repeat="cv in explorer.cvs" class="nav-item">
+								<a href ng-click="explorer.isActiveCV($index) || explorer.setCV($index)" ng-class="{active:explorer.isActiveCV($index)}">
+									{{cv.title}}
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="cv-display-area clearfix" ng-class="'cv-' + explorer.currentIndex">
+						<cv></cv>
+						<notes></notes>
+					</div>
+				</main>
+
+		</div>
+
+		<script src="/bower_components/jquery/dist/jquery.js"></script>
+		<script src="https://opensource.keycdn.com/angularjs/1.5.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.6/angular-sanitize.min.js"></script>
+		<script src="scripts/main.js"></script>
+
+	</body>
 </html>
