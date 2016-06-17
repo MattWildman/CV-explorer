@@ -112,7 +112,13 @@
 				"sections": [
 					{
 						"title": "Heading",
-						"content": "<h3>Acadmic heading</h3>"
+						"content": [
+							"<h3>Eva M. Heims</h3>",
+							"<p><strong>London School of Economics and Political Science</strong><br>",
+							"Department of Government<br>",
+							"Houghton Street, London WC2A 2AE<br>",
+							"0044 (0)7554655876 e.m.heims@lse.ac.uk</p>"
+						]
 					},
 					{
 						"title": "Statement",

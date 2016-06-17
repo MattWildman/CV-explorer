@@ -56,4 +56,11 @@
 		};
 	});
 
+	app.filter('contentToStr', function() {
+		return function(input) {
+			return Object.prototype.toString.call(input) === '[object Array]' ?
+				   input.join('\n') : input;
+		};
+	});
+
 })();

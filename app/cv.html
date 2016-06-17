@@ -4,7 +4,7 @@
 		<ul class="cv-page-navigator tab-nav">
 			<li ng-repeat="page in explorer.currentCV.pages" class="nav-item">
 				<a href ng-click="explorer.isActivePage($index) || explorer.setPage($index)" ng-class="{active:explorer.isActivePage($index)}">
-					{{page.name}}
+					Page {{$index + 1}}
 				</a>
 			</li>
 		</ul>
@@ -15,7 +15,7 @@
 	<div class="cv-page" ng-repeat="page in explorer.currentCV.pages" ng-show="explorer.isActivePage($index)">
 		<div class="cv-section"
 				 ng-repeat="section in page.sections"
-				 ng-bind-html="section.content"
+				 ng-bind-html="section.content | contentToStr"
 				 ng-click="explorer.setSection($index)"
 				 ng-class="{active:explorer.equals(section, explorer.currentSection)}">
 		</div>
