@@ -24,11 +24,16 @@
 		explorer.setSection = function(index) {
 			explorer.currentSection = explorer.currentCV.pages[explorer.currentPage].sections[index];
 		};
+
 		explorer.isActiveCV = function(index) {
 			return index === explorer.currentIndex;
 		};
 		explorer.isActivePage = function(index) {
 			return index === explorer.currentPage;
+		};
+
+		explorer.equals = function(o1, o2) {
+			return angular.equals(o1, o2);
 		};
 
 		$http.get('cvs.json').success(function(data) {

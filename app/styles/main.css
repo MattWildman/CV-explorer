@@ -85,19 +85,48 @@ body {
 	width: 400px;
 	height: calc(400px*1.4142);
 	margin: 0 auto;
+	padding: 0;
 	margin-bottom: 2em;
-	padding: 1em;
 	border:1px solid #E2E2E2;
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
-	background-color: #FFF;
+	background-color: white;
 	box-shadow: 5px 5px 7px #AAA;
 	font-size: 75%;
 }
 
 #CVExplorer .cv-section {
 	cursor: pointer;
+	padding: 1em;
+	position: relative;
+}
+
+#CVExplorer .cv-section.active,
+#CVExplorer .cv-section:hover, #CVExplorer .cv-section:focus {
+	outline: 2px solid;
+}
+
+#CVExplorer .cv-section.active::before,
+#CVExplorer .cv-section.active::after {
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	display: block;
+	border: 24px solid transparent;
+}
+
+#CVExplorer .cv-section.active::before {
+	left: 100%;
+	top: calc(50% - 24px);
+}
+
+#CVExplorer .cv-section.active::after {
+	border-width: 22px;
+	border-left-color: white;
+	left: calc(100% - 1px);
+	top: calc(50% - 22px);
 }
 
 #CVExplorer .cv-notes {

@@ -1,12 +1,21 @@
 
-#CVExplorer .tab-nav.cv-page-navigator .nav-item a.active, #CVExplorer .one-page-label {
-  background-color: #E2E2E2;
+/*** GREY ***/
+#CVExplorer .tab-nav.cv-page-navigator .nav-item a.active,
+#CVExplorer .tab-nav.cv-page-navigator .nav-item a:hover, #CVExplorer .one-page-label {
+	background-color: #E2E2E2;
 }
 #CVExplorer .tab-nav.cv-page-navigator .nav-item a, #CVExplorer .one-page-label {
-  border: 2px solid #E2E2E2;
+	border-top: 2px solid #E2E2E2;
+	border-bottom: 2px solid #E2E2E2;
+}
+#CVExplorer .tab-nav.cv-page-navigator .nav-item:first-child a {
+	border-left: 2px solid #E2E2E2;
+}
+#CVExplorer .tab-nav.cv-page-navigator .nav-item:last-child a {
+	border-right: 2px solid #E2E2E2;
 }
 #CVExplorer .tab-nav.cv-page-navigator .nav-item a.active::after {
-  border-top-color: #E2E2E2;
+	border-top-color: #E2E2E2;
 }
 
 /*** GREEN ***/
@@ -22,6 +31,12 @@
 #CVExplorer .cv-navigator .nav-item:nth-child(5n+1) a:not(.active):hover::after {
 	border-top-color: #7CCC80;
 }
+#CVExplorer .cv-0 .cv-section.active, #CVExplorer .cv-0 .cv-section, #CVExplorer .cv-0 .cv-section:focus {
+	outline-color: #7CCC80;
+}
+#CVExplorer .cv-0 .cv-section.active::before {
+	border-left-color: #7CCC80;
+}
 
 /*** ORANGE ***/
 #CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a, #CVExplorer .cv-1 .cv-notes {
@@ -30,11 +45,17 @@
 #CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a::after {
 	border-top-color: #FAC38E;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a:hover {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a:not(.active):hover {
 	background: #F9AB63;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a:hover::after {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+2) a:not(.active):hover::after {
 	border-top-color: #F9AB63;
+}
+#CVExplorer .cv-1 .cv-section.active, #CVExplorer .cv-1 .cv-section, #CVExplorer .cv-1 .cv-section:focus {
+	outline-color: #F9AB63;
+}
+#CVExplorer .cv-1 .cv-section.active::before {
+	border-left-color: #F9AB63;
 }
 
 /*** BLUE ***/
@@ -44,11 +65,17 @@
 #CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a::after {
 	border-top-color: #82CDEC;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a:hover {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a:not(.active):hover {
 	background: #4DB8E4;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a:hover::after {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+3) a:not(.active):hover::after {
 	border-top-color: #4DB8E4;
+}
+#CVExplorer .cv-2 .cv-section.active, #CVExplorer .cv-2 .cv-section, #CVExplorer .cv-2 .cv-section:focus {
+	outline-color: #4DB8E4;
+}
+#CVExplorer .cv-2 .cv-section.active::before {
+	border-left-color: #4DB8E4;
 }
 
 /*** PURPLE ***/
@@ -58,11 +85,17 @@
 #CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a::after {
 	border-top-color: #C3ACD2;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a:hover {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a:not(.active):hover {
 	background: #946AAF;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a:hover::after {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+4) a:not(.active):hover::after {
 	border-top-color: #946AAF;
+}
+#CVExplorer .cv-3 .cv-section.active, #CVExplorer .cv-3 .cv-section, #CVExplorer .cv-3 .cv-section:focus {
+	outline-color: #946AAF;
+}
+#CVExplorer .cv-3 .cv-section.active::before {
+	border-left-color: #946AAF;
 }
 
 /*** RED ***/
@@ -72,9 +105,15 @@
 #CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a::after {
 	background: #F7939C;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a:hover {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a:not(.active):hover {
 	background: #F03E4D;
 }
-#CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a:hover::after {
+#CVExplorer .cv-navigator .nav-item:nth-child(5n+5) a:not(.active):hover::after {
 	border-top-color: #F03E4D;
+}
+#CVExplorer .cv-4 .cv-section.active, #CVExplorer .cv-4 .cv-section, #CVExplorer .cv-4 .cv-section:focus {
+	outline-color: #F03E4D;
+}
+#CVExplorer .cv-4 .cv-section.active::before {
+	border-left-color: #F03E4D;
 }
