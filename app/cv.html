@@ -1,5 +1,5 @@
 <h2>{{explorer.currentCV.title}}</h2>
-<section class="cv">
+<section class="cv {{explorer.currentCV.id}}">
 	<nav ng-show="explorer.currentCV.pages.length > 1">
 		<ul class="cv-page-navigator tab-nav">
 			<li ng-repeat="page in explorer.currentCV.pages" class="nav-item">
@@ -12,12 +12,14 @@
 	<div class="one-page-label" ng-show="explorer.currentCV.pages.length === 1">
 		<p>These CVs can be one page long</p>
 	</div>
-	<div class="cv-page" ng-repeat="page in explorer.currentCV.pages" ng-show="explorer.isActivePage($index)">
+	<div class="cv-page"
+			 ng-repeat="page in explorer.currentCV.pages"
+			 ng-show="explorer.isActivePage($index)">
 		<div class="cv-section"
 				 ng-repeat="section in page.sections"
 				 ng-bind-html="section.content | contentToStr"
 				 ng-click="explorer.setSection($index)"
-				 ng-class="{active:explorer.equals(section, explorer.currentSection)}">
+				 ng-class="[section.id, {active:explorer.equals(section, explorer.currentSection)}]">
 		</div>
 	</div>
 </section>
